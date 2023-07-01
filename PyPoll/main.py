@@ -16,6 +16,7 @@ import csv
 
 #make empty list for votes
 votes = []
+headers = []
 
 #create path for vote file
 vote_path = os.path.join("Resources", "election_data.csv")
@@ -24,8 +25,14 @@ vote_path = os.path.join("Resources", "election_data.csv")
 with open(vote_path) as csvfile:
     vote_reader = csv.reader(csvfile, delimiter=",")
 
-    #skip the header row
-    next(vote_reader)
+        # loop to iterate through the rows of csv
+    for row in vote_reader:
+ 
+        # adding the header row
+        headers.append(row)
+ 
+        # breaking the loop after the first iteration
+        break
 
     #add votes to the empty list
     for row in vote_reader:

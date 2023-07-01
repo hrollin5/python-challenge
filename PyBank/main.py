@@ -1,5 +1,6 @@
 #PyBank
 
+
 # Instrucions: 
 
 #Your task is to create a Python script that analyzes the records to calculate each of the following values:
@@ -14,8 +15,6 @@
 #First, import the necessary modules
 import os
 import csv
-from pathlib import Path
-import statistics
 
 #Create empty lists to store the data
 months = []
@@ -23,7 +22,7 @@ profit_losses = []
 change_profit_losses = []
 change_data = []
 previous_revenue = 0
-
+headers = []
 change_int = []
 
 #create path to the file
@@ -32,8 +31,14 @@ budget_path = os.path.join("Resources", "budget_data.csv")
 #open the csv file
 with open(budget_path) as csvfile:
     budget_reader = csv.reader(csvfile, delimiter=',')
-    #Skip the header row
-    next(budget_reader)
+         # loop to iterate through the rows of csv
+    for row in budget_reader:
+ 
+        # adding the header row
+        headers.append(row)
+ 
+        # breaking the loop after the first iteration
+        break
 
     #add columns to created lists
     for row in budget_reader:
