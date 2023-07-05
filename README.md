@@ -1,7 +1,5 @@
 # Python-Challenge
-This project showcases the basic elements of Python. The scripts are simple but demonstrate skills required for the elementary analysis of  
-a CSV file in Python. There are two sections, each representing a real work analysis situation. Each section includes a dataset, a Python  
-script, and a text file with the results. 
+This project showcases the basic elements of Python. The scripts are simple but demonstrate skills required for the analysis of a CSV file in core Python. There are two sections, each representing a real work analysis situation. Each section includes a dataset, a Python script, and a text file with the results. 
 
 ## PyBank
 This dataset includes several years of revenue information for a bank. The main.py script extracts the following from the dataset:  
